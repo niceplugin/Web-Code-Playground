@@ -94,6 +94,8 @@ function touchend(event) {
 /**
  * 포인트 움직임에 따른 화면 리사이징
  * @function resizeMove
+ * @param {number} x
+ * @param {number} y
  */
 function resizeMove(x, y) {
   const borderWidth = 4
