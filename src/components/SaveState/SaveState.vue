@@ -1,5 +1,5 @@
 <template>
-  <div class="inline-block float-right">
+  <div class="float-right">
     <save-state-box-saving v-if="editor.saved === false"/>
     <save-state-box-saved v-if="editor.saved === true"/>
   </div>
