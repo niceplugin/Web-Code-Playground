@@ -6,6 +6,7 @@
         :disabled="true"
         text="Web"
       />
+      <share-button v-if="sharePossible"/>
       <save-state/>
     </div>
     <div class="relative border-zinc-600 border-[1px] grow rounded-tr overflow-hidden">
@@ -35,8 +36,10 @@ import router from '@/router'
 import SaveState from '@/components/SaveState/SaveState.vue'
 import { useResize } from '@/stores/resizeStore'
 import WindowSize from '@/components/WindowSize.vue'
+import ShareButton from '@/components/ShareButton/ShareButton.vue'
 
 let timeoutID = 0
+const sharePossible = Boolean(navigator?.clipboard?.writeText)
 const iframe = ref(null)
 const editor = useEditor()
 const resize = useResize()

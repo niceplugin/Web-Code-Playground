@@ -1,8 +1,5 @@
 <template>
-  <div
-    id="saved-box"
-    class="inline-block"
-  >
+  <div class="ani-cleared flex">
     <span class="text-white">Saved! </span>
     <svg-icon
       id="saved-icon"
@@ -19,15 +16,4 @@ import { mdiCheck } from '@mdi/js'
 </script>
 
 <style scoped>
-@keyframes cleared {
-  0%, 50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-#saved-box {
-  animation: cleared 3s linear forwards;
-}
 </style>
