@@ -83,7 +83,7 @@ function injectSource(source) {
   iDoc.body.appendChild(script)
 
   const json = JSON.stringify(source)
-  const value = btoa(json)
+  const value = btoa(encodeURIComponent(json))
   router.push({
     query: {
       v: value,
