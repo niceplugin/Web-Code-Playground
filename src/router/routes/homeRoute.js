@@ -21,7 +21,7 @@ export default {
           /** 각 코드 데이터 파싱 */
           try {
             const editor = useEditor()
-            const info = JSON.parse(atob(data))
+            const info = JSON.parse(decodeURIComponent(atob(data)))
 
             editor.html = info.html
             editor.css = info.css
