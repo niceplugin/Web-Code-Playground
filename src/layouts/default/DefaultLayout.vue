@@ -1,5 +1,5 @@
 <template>
-  <div id="default-layout" class="flex flex-col min-h-[100vh]">
+  <div id="default-layout" class="flex flex-col h-full">
     <div id="ad-box"/>
     <router-view/>
   </div>
