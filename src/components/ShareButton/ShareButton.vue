@@ -1,8 +1,9 @@
 <template>
   <div class="relative inline-flex pl-1 float-right">
     <button
-      class="whitespace-pre px-2 rounded text-white bg-blue-600"
+      class="whitespace-pre px-2 rounded text-white bg-blue-600 disabled:bg-gray-500"
       @click="copyShareLink"
+      :disabled="editor.saved === false"
     >
       <span>Share</span>
       <svg-icon
@@ -23,7 +24,9 @@ import ShareToast from '@/components/ShareButton/ShareToast.vue'
 import SvgIcon from '@jamescoyle/vue-icon'
 import { mdiShare } from '@mdi/js'
 import { ref } from 'vue'
+import { useEditor } from '@/stores/editorStore'
 
+const editor = useEditor()
 const showToast = ref(false)
 
 function copyShareLink() {
